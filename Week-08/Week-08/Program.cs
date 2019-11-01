@@ -10,6 +10,12 @@ namespace Week_08
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\r\n------ Input Values ------\r\n");
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.Write("Input value index[" + i + "] : ");
+                
+            }
             int[] data = new int[10];
             data[0] = 0;
             data[1] = 1;
