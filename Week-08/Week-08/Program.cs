@@ -21,17 +21,9 @@ namespace Week_08
             data[6] = 4*1;
             data[7] = 4*1;
             
-            Console.WriteLine(data[0]);
-            Console.WriteLine(data[1]);
-            Console.WriteLine(data[2]);
-            Console.WriteLine(data[3]);
-            Console.WriteLine(data[4]);
-            Console.WriteLine(data[5]);
-            Console.WriteLine(data[6]);
-            Console.WriteLine(data[7]);
+           
 
-
-            Console.WriteLine(value: data[0 + 1 + 2 + 3 + 4 + 5 + 6 + 7] 21);
+            Console.WriteLine(data (0 + 1 + 2 + 3 + 4 + 5 + 6 + 7)%21);
             Console.ReadLine();
 
         }
