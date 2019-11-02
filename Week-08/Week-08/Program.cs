@@ -31,7 +31,7 @@ namespace Week_08
             Console.WriteLine(data[7]);
 
 
-            Console.WriteLine(value: data[0 + 1 + 2 + 3 + 4 + 5 + 6 + 7] );
+            Console.WriteLine(value: data[0 + 1 + 2 + 3 + 4 + 5 + 6 + 7] 21);
             Console.ReadLine();
 
         }
