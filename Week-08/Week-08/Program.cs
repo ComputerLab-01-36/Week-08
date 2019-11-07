@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,17 +11,23 @@ namespace Week_08
     {
         static void Main(string[] args)
         {
-            int[,] multiplyTable = new int[12, 12];
-            for (int row = 0; row < multiplyTable.GetLength(0); row++)
+            ArrayList list = new ArrayList();
+            Console.WriteLine("Create a list");
+            Console.WriteLine("List capacity = {0,2}", list.Capacity);
+            for (int i = 0; i < 100; i++)
             {
-                for (int col = 0, mul = 2; col < multiplyTable.GetLength(1); col++, mul++)
-                {
-                    if (mul == 13)
-                        continue;
-                    Console.Write("{0 , 3} ", mul * (row + 1));
-                    //Console.Write($"{row},{col} ");
-                }
-                Console.WriteLine();
+                Console.Write("Add int to list : {0,2} => ", i);
+                list.Add(i);
+                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
+                  list.Count, list.Capacity);
+            }
+            Console.WriteLine("-----------------------");
+            for (int i = 0; i < 100; i++)
+            {
+                Console.Write("Remove int from list : {0,2} => ", i);
+                list.Remove(i);
+                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
+                  list.Count, list.Capacity);
             }
             Console.ReadLine();
 
