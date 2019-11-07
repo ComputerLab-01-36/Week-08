@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,26 +12,26 @@ namespace Week_08
     {
         static void Main(string[] args)
         {
-            ArrayList list = new ArrayList();
-            Console.WriteLine("Create a list");
-            Console.WriteLine("List capacity = {0,2}", list.Capacity);
-            for (int i = 0; i < 100; i++)
-            {
-                Console.Write("Add int to list : {0,2} => ", i);
-                list.Add(i);
-                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
-                  list.Count, list.Capacity);
-            }
-            Console.WriteLine("-----------------------");
-            for (int i = 0; i < 100; i++)
-            {
-                Console.Write("Remove int from list : {0,2} => ", i);
-                list.Remove(i);
-                Console.WriteLine("List count =  {0,3}, capacity = {1,3}  ",
-                  list.Count, list.Capacity);
-            }
-            Console.ReadLine();
+            Dictionary<string, string> Tfile = new Dictionary<string, string>();
+            Tfile.Add("txt", "Notepad.exe");
+            Tfile.Add("bmp", "paint.exe");
+            Tfile.Add("rtf", "wordpad.exe");
+            Tfile.Add("pdf", "acrobat.exe");
 
+            foreach (var item in Tfile)
+                Console.WriteLine($"{item.Key} => {item.Value}");
+            Console.WriteLine();
+
+            Console.Write("Enter type file: ");
+            string type = Console.ReadLine().ToLower();
+
+            foreach (var item in Tfile)
+            {
+                if (type.Equals(item.Key))
+                    Process.Start(item.Value);
+            }
+
+            Console.ReadLine();
         }
     }
 
