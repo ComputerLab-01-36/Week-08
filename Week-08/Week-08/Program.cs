@@ -10,23 +10,27 @@ namespace Week_08
     {
         static void Main(string[] args)
         {
-            float[] gps = new float[8];
-            for (int i = 0; i < gps.Length; i++)
+
+            int[] month = { 2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0 };
+            string[] days =
             {
-                Console.Write($"Enter GPS term{i + 1} : ");
-                gps[i] = float.Parse(Console.ReadLine());
-            }
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Tuesday",
+            "Friday",
+            "Saturday",            };
+            Console.Write("Enter date : ");
+            int date = int.Parse(Console.ReadLine());
+            Console.Write("Enter month: ");
+            int inmonth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("about GPS");
+            int day = (date + month[inmonth - 1] - 1) % 7;
 
-            foreach (float j in gps)
-            {
-                Console.Write($"{j,0:N} ");
-            }
-            Console.WriteLine();
+            Console.WriteLine($"{date}/{inmonth}/2561 is {days[day]}");
+            Console.Read();
 
-            Console.WriteLine("GPA is {0 , 0:N}", gps.Sum() / gps.Length);
-            Console.ReadLine();
         }
     }
 }
