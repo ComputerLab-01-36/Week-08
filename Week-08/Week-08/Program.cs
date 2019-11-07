@@ -10,13 +10,11 @@ namespace Week_08
     {
         static void Main(string[] args)
         {
-            //var sort = from x in CountryArrays.Names
-            //           orderby x.Length, x
-            //           select x;
-
             var sort = from x in CountryArrays.Names
-                       orderby x.Length descending, x descending
-                       select x;
+                     orderby x.Length, x
+                      select x;
+
+           
             foreach (string str in sort)
             {
                 Console.WriteLine(str);
