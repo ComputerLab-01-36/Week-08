@@ -11,26 +11,28 @@ namespace Week_08
         static void Main(string[] args)
         {
 
-            int[] month = { 2, 5, 5, 1, 3, 6, 1, 4, 0, 2, 5, 0 };
-            string[] days =
-            {
-            "Sunday",
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Tuesday",
-            "Friday",
-            "Saturday",            };
-            Console.Write("Enter date : ");
-            int date = int.Parse(Console.ReadLine());
-            Console.Write("Enter month: ");
-            int inmonth = int.Parse(Console.ReadLine());
+            string[] month = {
+                "January",
+                "February",
+                "March",
+                "Aprill",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "November",
+                "December",
+            };
+            //ข้อ a
+            Console.WriteLine("little size : " + Array.Find(month, element => element.Length == 3));
+           
+            //ข้อ c
+            Console.WriteLine("start of J : " + string.Join(",", Array.FindAll(month, element => element.StartsWith("J", StringComparison.Ordinal))));
+            Console.ReadLine();
 
-            int day = (date + month[inmonth - 1] - 1) % 7;
-
-            Console.WriteLine($"{date}/{inmonth}/2561 is {days[day]}");
-            Console.Read();
-
+            Console.ReadLine();
         }
     }
+    
 }
