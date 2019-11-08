@@ -12,7 +12,7 @@ namespace lab08
     {
         static void Main(string[] args)
         {
-            string sprovide, lsprovide = null;
+            string sprovide;
             string snumpost, lsnumpost = null;
             int numpost;
 
@@ -35,7 +35,7 @@ namespace lab08
                     else
                     {
                         Provide.Add(snumpost, sprovide);
-                        //Console.WriteLine($"{sprovide} => {snumpost}");
+                        Console.WriteLine($"{sprovide} => {snumpost}");
                         //lsprovide = sprovide;
                         lsnumpost = snumpost;
                     }
